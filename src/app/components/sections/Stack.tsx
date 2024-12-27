@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import { Tooltip } from "@nextui-org/react";
 
 const stackLogos = [
   {
@@ -66,17 +67,19 @@ const stackLogos = [
 
 const StackLogo = ({ image, name, color }: { image: string, name: string, color: string }) => {
   return (
-  <div
-    className='flex justify-center items-center backdrop-blur-sm rounded-xl p-2'
-    style={{backgroundColor: color}}
-  >
-    <Image
-      src={`/logos/${image}.svg`}
-      width={40}
-      height={32}
-      alt={`${name} Logo`}
-    />
-  </div>
+    <Tooltip content={name}>
+      <div
+        className='flex justify-center items-center backdrop-blur-sm rounded-xl p-2'
+        style={{backgroundColor: color}}
+      >
+        <Image
+          src={`/logos/${image}.svg`}
+          width={40}
+          height={32}
+          alt={`${name} Logo`}
+        />
+      </div>
+    </Tooltip>
   )
 }
 // Icons
