@@ -1,12 +1,25 @@
 'use client'
 import { Button } from "@nextui-org/button";
+import { StackLogos } from "../StackLogos";
+import { FaFileDownload } from "react-icons/fa";
 
 // Icons
 export function Hero() {
   return (
-    <section className="relative flex items-center justify-center">
-		Hero
-		<Button color="primary">Button</Button>;
-	</section>
+    <section className="min-h-screen bg-light dark:bg-slate-950 flex items-center">
+      <span>
+        <h1 className="text-6xl sm:text-8xl dark:text-cyan-50">Full Stack <br /> Developer</h1>
+        <Button
+          variant="flat"
+          color="secondary"
+          endContent={<FaFileDownload />}
+        >
+          Descargar CV
+        </Button>
+      </span>
+      <span>
+        <StackLogos diameter={400}/>
+      </span>
+	  </section>
   );
 };

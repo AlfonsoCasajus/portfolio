@@ -35,7 +35,7 @@ const stackLogos = [
     name: 'TypeScript',
   },
   {
-    color: '#1A1A1A', // Gris muy oscuro
+    color: '#2b2b2b', // Gris muy oscuro
     image: 'nextjs',
     name: 'Next.js',
   },
@@ -60,7 +60,7 @@ const stackLogos = [
     name: 'Visual Studio Code',
   },
   {
-    color: '#C13A24', // Naranja oscuro
+    color: '#972d1d', // Naranja oscuro
     image: 'git',
     name: 'Git',
   },
@@ -68,7 +68,11 @@ const stackLogos = [
 
 const StackLogo = ({ image, name, color, style }: { image: string, name: string, color: string, style: object }) => {
   return (
-    <Tooltip content={name}>
+    <Tooltip content={
+      <p className="text-slate-950 dark:text-slate-200">
+        {name}
+      </p>
+    }>
       <div
         className='flex justify-center w-16 h-16 items-center backdrop-blur-sm rounded-xl p-3'
         style={{backgroundColor: color, ...style}}
@@ -85,7 +89,7 @@ const StackLogo = ({ image, name, color, style }: { image: string, name: string,
 }
 
 // Icons
-export function StackLogos() {
+export function StackLogos({ diameter }: { diameter: number }) {
   return (
       <motion.ul
         animate={{
@@ -96,11 +100,10 @@ export function StackLogos() {
           duration: 50, // Tiempo para completar una rotación
           ease: "linear",
         }}
-        className='border-s-orange-300'
       >
         {stackLogos.map((logo, index) => {
           const angle = (360 / stackLogos.length) * index; // Calcular el ángulo para cada elemento
-          const radius = 200; // Radio del círculo
+          const radius = diameter / 2; // Radio del círculo
 
           return (
             <motion.li key={index}
