@@ -1,76 +1,77 @@
 'use client'
 import Image from 'next/image'
 import { Tooltip } from "@nextui-org/react";
+import { motion } from "framer-motion"
 
 const stackLogos = [
   {
-    color: '#264de4', // Azul
+    color: '#1E3A8A', // Azul oscuro
     image: 'css',
     name: 'CSS',
   },
   {
-    color: '#68A063', // Verde
-    image: 'expressjs',
-    name: 'Express.js',
-  },
-  {
-    color: '#F05033', // Naranja
-    image: 'git',
-    name: 'Git',
-  },
-  {
-    color: '#E434AA', // Rosado
-    image: 'graphql',
-    name: 'GraphQL',
-  },
-  {
-    color: '#E34F26', // Rojo
+    color: '#B7411C', // Rojo oscuro
     image: 'html5',
     name: 'HTML5',
   },
   {
-    color: '#F7DF1E', // Amarillo
+    color: '#C2A500', // Amarillo oscuro
     image: 'javascript',
     name: 'JavaScript',
   },
   {
-    color: '#000000', // Negro
-    image: 'nextjs',
-    name: 'Next.js',
-  },
-  {
-    color: '#339933', // Verde
-    image: 'nodejs',
-    name: 'Node.js',
-  },
-  {
-    color: '#61DAFB', // Azul celeste
+    color: '#2C6E9E', // Azul más oscuro
     image: 'react',
     name: 'React',
   },
   {
-    color: '#38B2AC', // Verde azulado
+    color: '#2C8280', // Verde azulado oscuro
     image: 'tailwind',
     name: 'Tailwind CSS',
   },
   {
-    color: '#3178C6', // Azul
+    color: '#22577E', // Azul oscuro
     image: 'typescript',
     name: 'TypeScript',
   },
   {
-    color: '#007ACC', // Azul claro
+    color: '#1A1A1A', // Gris muy oscuro
+    image: 'nextjs',
+    name: 'Next.js',
+  },
+  {
+    color: '#267326', // Verde oscuro
+    image: 'nodejs',
+    name: 'Node.js',
+  },
+  {
+    color: '#4B7945', // Verde más oscuro
+    image: 'expressjs',
+    name: 'Express.js',
+  },
+  {
+    color: '#9B267D', // Rosado oscuro
+    image: 'graphql',
+    name: 'GraphQL',
+  },
+  {
+    color: '#005A8E', // Azul más oscuro
     image: 'vscode',
     name: 'Visual Studio Code',
   },
+  {
+    color: '#C13A24', // Naranja oscuro
+    image: 'git',
+    name: 'Git',
+  },
 ];
 
-const StackLogo = ({ image, name, color }: { image: string, name: string, color: string }) => {
+const StackLogo = ({ image, name, color, style }: { image: string, name: string, color: string, style: object }) => {
   return (
     <Tooltip content={name}>
       <div
-        className='flex justify-center items-center backdrop-blur-sm rounded-xl p-2'
-        style={{backgroundColor: color}}
+        className='flex justify-center w-16 h-16 items-center backdrop-blur-sm rounded-xl p-3'
+        style={{backgroundColor: color, ...style}}
       >
         <Image
           src={`/logos/${image}.svg`}
@@ -82,20 +83,43 @@ const StackLogo = ({ image, name, color }: { image: string, name: string, color:
     </Tooltip>
   )
 }
+
 // Icons
-export function Stack() {
+export function StackLogos() {
   return (
-    <section className="flex flex-col justify-center items-center bg-slate-450">
-    <h2>Stack</h2>
-    <ul className='flex gap-3 flex-wrap'>
-      {
-        stackLogos.map((logo, index) => (
-          <li key={index}>
-            <StackLogo name={logo.name} image={logo.image} color={logo.color} />
-          </li>
-        ))
-      }
-    </ul>
-	</section>
+      <motion.ul
+        animate={{
+          rotate: 360, // Rotar el contenedor completo
+        }}
+        transition={{
+          repeat: Infinity,
+          duration: 50, // Tiempo para completar una rotación
+          ease: "linear",
+        }}
+        className='border-s-orange-300'
+      >
+        {stackLogos.map((logo, index) => {
+          const angle = (360 / stackLogos.length) * index; // Calcular el ángulo para cada elemento
+          const radius = 200; // Radio del círculo
+
+          return (
+            <motion.li key={index}
+              whileHover={{ scale: 1.1 }}
+              animate={{
+                rotate: 360, // Rotar el contenedor completo
+              }}
+            >
+              <StackLogo name={logo.name} image={logo.image} color={logo.color}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: `translate(-50%, -50%) rotate(${angle}deg) translate(${radius}px)`,
+                }}
+              />
+            </motion.li>
+          );
+        })}
+      </motion.ul>
   );
 };
