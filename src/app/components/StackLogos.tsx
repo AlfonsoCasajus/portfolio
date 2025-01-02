@@ -30,6 +30,16 @@ const stackLogos = [
     name: 'Tailwind CSS',
   },
   {
+    color: '#2e664d', // Azul más oscuro
+    image: 'vuejs',
+    name: 'Vue Js',
+  },
+  {
+    color: '#6b2b3a', // Azul más oscuro
+    image: 'nestjs',
+    name: 'Nest Js',
+  },
+  {
     color: '#22577E', // Azul oscuro
     image: 'typescript',
     name: 'TypeScript',
@@ -53,6 +63,26 @@ const stackLogos = [
     color: '#9B267D', // Rosado oscuro
     image: 'graphql',
     name: 'GraphQL',
+  },
+  {
+    color: '#264c6b', // Rosado oscuro
+    image: 'postgresql',
+    name: 'PostgreSQL',
+  },
+  {
+    color: '#7a46c9', // Rosado oscuro
+    image: 'vitejs',
+    name: 'Vite',
+  },
+  {
+    color: '#142c26', // Rosado oscuro
+    image: 'nuxt',
+    name: 'Nuxt Js',
+  },
+  {
+    color: '#63314a', // Rosado oscuro
+    image: 'sass',
+    name: 'Sass',
   },
   {
     color: '#005A8E', // Azul más oscuro
@@ -108,9 +138,6 @@ export function StackLogos({ diameter }: { diameter: number }) {
           return (
             <motion.li key={index}
               whileHover={{ scale: 1.1 }}
-              animate={{
-                rotate: 360, // Rotar el contenedor completo
-              }}
             >
               <StackLogo name={logo.name} image={logo.image} color={logo.color}
                 style={{
