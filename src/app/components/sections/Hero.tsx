@@ -9,16 +9,18 @@ export function Hero() {
     <section className="min-h-screen bg-light dark:bg-slate-950 flex items-center">
       <span>
         <h1 className="text-6xl sm:text-8xl dark:text-cyan-50">Full Stack <br /> Developer</h1>
-        <Button
-          variant="flat"
-          color="secondary"
-          endContent={<FaFileDownload />}
-        >
-          Descargar CV
-        </Button>
+        <a href="/cv/CV_AlfonsoCasajusPonce.pdf" download="CV_AlfonsoCasajusPonce.pdf">
+          <Button
+            variant="flat"
+            color="secondary"
+            endContent={<FaFileDownload />}
+          >
+            Descargar CV
+          </Button>
+        </a>
       </span>
       <span>
-        <StackLogos diameter={400}/>
+        <StackLogos diameter={475}/>
       </span>
 	  </section>
   );
