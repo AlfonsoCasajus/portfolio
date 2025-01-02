@@ -119,31 +119,31 @@ const StackLogo = ({ image, name, color, style }: { image: string, name: string,
 }
 
 // Icons
-export function StackLogos({ diameter }: { diameter: number }) {
+export function StackLogos() {
   return (
+    <div>
       <motion.ul
         animate={{
-          rotate: 360, // Rotar el contenedor completo
+          rotate: -360, // Rotar el contenedor completo
         }}
         transition={{
           repeat: Infinity,
           duration: 50, // Tiempo para completar una rotación
           ease: "linear",
         }}
+        className="flex justify-center items-center w-[475px] h-[475px]"
       >
         {stackLogos.map((logo, index) => {
           const angle = (360 / stackLogos.length) * index; // Calcular el ángulo para cada elemento
-          const radius = diameter / 2; // Radio del círculo
+          const radius = 475 / 2; // Radio del círculo
 
           return (
             <motion.li key={index}
               whileHover={{ scale: 1.1 }}
+              className='absolute left-1/2 top-1/2'
             >
               <StackLogo name={logo.name} image={logo.image} color={logo.color}
                 style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
                   transform: `translate(-50%, -50%) rotate(${angle}deg) translate(${radius}px)`,
                 }}
               />
@@ -151,5 +151,6 @@ export function StackLogos({ diameter }: { diameter: number }) {
           );
         })}
       </motion.ul>
+    </div>
   );
 };
