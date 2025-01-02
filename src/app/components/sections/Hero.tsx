@@ -29,6 +29,7 @@ export function Hero() {
               variant="flat"
               color="secondary"
               endContent={<FaFileDownload />}
+              size="lg"
             >
               Descargar CV
             </Button>
