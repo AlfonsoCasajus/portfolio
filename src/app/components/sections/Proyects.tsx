@@ -24,7 +24,7 @@ export function Proyects() {
 					ver resultados de sus partidas jugadas y encontrar
 					otros equipos con quienes competir
 				"
-				technologies={['vuejs', 'nestjs', 'typescript', 'postgresql']}
+				technologies={['vuejs', 'sass', 'nestjs', 'typescript', 'postgresql']}
 				authentication={['google', 'discord']}
 				integrations={['riotGames']}
 				liveUrl="https://elunderesports.com/torneos"
@@ -79,7 +79,7 @@ export function Proyects() {
 				title="Interfaz de Chat"
 				description="
 					Vista responsive para administrar multiples conversaciones con diferentes usuarios.
-					Cuenta la lista de usuarios, el respectivo chat y su informacion.
+					Cuenta con una lista de usuarios, el respectivo chat y su informacion.
 				"
 				technologies={['vuejs', 'tailwind', 'vitejs']}
 				githubUrl=" https://github.com/AlfonsoCasajus/chat-interface"
@@ -116,7 +116,10 @@ export function Proyects() {
 			>
 			<ProjectCard
 				title="Video Club"
-				description="Plataforma de torneos"
+				description="
+					Imita el catalogo de una video club donde se puede buscar peliculas, series y episodios por nombre
+					y ver toda su informacion
+				"
 				technologies={['vuejs', 'nuxt', 'sass']}
 				githubUrl=" https://github.com/AlfonsoCasajus/verifarma-videoclub"
 				liveUrl="https://verifarma-videoclub.vercel.app/login"
