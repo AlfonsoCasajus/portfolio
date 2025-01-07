@@ -75,14 +75,12 @@ export function Proyects() {
 			<ProjectCard
 				title="Interfaz de Chat"
 				description="
-					Este es un proyecto personal en el cual llevo trabajo un tiempo.
-					Permite a los organizadores administrar sus torneos mientras que a los jugadores les permite encontrar torneos,
-					ver resultados de sus partidas jugadas, encontrar otros equipos con quienes jugar y todo esto sumando puntos
-					para el respectivo ranking.
+					Vista responsive para administrar multiples conversaciones con diferentes usuarios.
+					Cuenta la lista de usuarios, el respectivo chat y su informacion.
 				"
 				technologies={['vuejs', 'tailwind', 'vitejs']}
 				githubUrl=" https://github.com/AlfonsoCasajus/verifarma-videoclub"
-				liveUrl="https://elunderesports.com/torneos"
+				liveUrl="https://chat-interface-beta.vercel.app/"
 			/>
 		</motion.span>
 		<motion.span
