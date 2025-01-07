@@ -2,7 +2,7 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 
-export function Proyects() {
+export function Projects() {
   return (
     <section
       className="grid grid-cols-4 grid-rows-1 gap-5 p-6 bg-blue-200 dark:bg-slate-800 overflow-hidden"
