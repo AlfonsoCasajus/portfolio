@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@nextui-org/button";
 import { StackLogos } from "../StackLogos";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 // Icons
@@ -20,13 +20,14 @@ export function Hero() {
           initial={{ x: "-150px", opacity: 0 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          className="flex gap-4 mt-8"
         >
           <a
             href="/cv/CV_AlfonsoCasajusPonce.pdf"
             download="CV_AlfonsoCasajusPonce.pdf"
           >
             <Button
-              variant="flat"
+              variant="shadow"
               color="secondary"
               endContent={<FaFileDownload />}
               size="lg"
@@ -34,6 +35,21 @@ export function Hero() {
               Descargar CV
             </Button>
           </a>
+          <a
+            href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"
+          >
+             <Button size="lg" endContent={<FaLinkedin />} variant="flat" aria-label="Linkedin" color="primary">
+              Linkedin
+            </Button>
+          </a>
+          <a
+            href="https://github.com/AlfonsoCasajus" target="_blank" rel="noopener noreferrer"
+          >
+            <Button size="lg" endContent={<FaGithub />} variant="flat" aria-label="Github">
+              Github
+            </Button>
+
+          </a>            
         </motion.div>
       </span>
       <motion.span
