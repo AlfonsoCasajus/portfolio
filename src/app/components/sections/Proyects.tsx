@@ -55,10 +55,13 @@ export function Proyects() {
 			}}>
 			<ProjectCard
 				title="Pokedex"
-				description="Listado de Pokemones"
+				description="
+					App para ver todos los diferentes pokemones que existen junto a su informacion.
+					Cuenta con filtrado y la posibilidad de marcar los pokemones favoritos
+				"
 				technologies={['vuejs', 'typescript', 'vitejs']}
 				githubUrl="https://github.com/AlfonsoCasajus/global-pokedex"
-				liveUrl="https://elunderesports.com/torneos"
+				liveUrl="https://pokedex-vert-zeta.vercel.app/"
 				integrations={['pokeapi']}
 			/>
 		</motion.span>
@@ -79,7 +82,7 @@ export function Proyects() {
 					Cuenta la lista de usuarios, el respectivo chat y su informacion.
 				"
 				technologies={['vuejs', 'tailwind', 'vitejs']}
-				githubUrl=" https://github.com/AlfonsoCasajus/verifarma-videoclub"
+				githubUrl=" https://github.com/AlfonsoCasajus/chat-interface"
 				liveUrl="https://chat-interface-beta.vercel.app/"
 			/>
 		</motion.span>
@@ -116,7 +119,7 @@ export function Proyects() {
 				description="Plataforma de torneos"
 				technologies={['vuejs', 'nuxt', 'sass']}
 				githubUrl=" https://github.com/AlfonsoCasajus/verifarma-videoclub"
-				liveUrl="https://elunderesports.com/torneos"
+				liveUrl="https://verifarma-videoclub.vercel.app/login"
 			/>
 		</motion.span>
     </section>
