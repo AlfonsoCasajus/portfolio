@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion"
+import useWindowSize from '@/hooks/useWindowSize';
+
 
 const stackLogos = [
   {
@@ -96,6 +98,7 @@ const stackLogos = [
 ];
 
 const StackLogo = ({ image, name, color, style }: { image: string, name: string, color: string, style: object }) => {
+  const { isLg } = useWindowSize();
   return (
     <Tooltip content={
       <p className="text-slate-950 dark:text-slate-200">
@@ -103,13 +106,13 @@ const StackLogo = ({ image, name, color, style }: { image: string, name: string,
       </p>
     }>
       <div
-        className='flex justify-center w-16 h-16 items-center backdrop-blur-sm rounded-xl p-3'
+        className='flex justify-center items-center backdrop-blur-sm rounded-xl p-2 lg:w-16 lg:h-16 lg:p-3'
         style={{backgroundColor: color, ...style}}
       >
         <Image
           src={`/logos/${image}.svg`}
-          width={40}
-          height={32}
+          width={isLg ? 40 : 25}
+          height={isLg ? 32 : 20}
           alt={`${name} Logo`}
         />
       </div>
@@ -119,6 +122,7 @@ const StackLogo = ({ image, name, color, style }: { image: string, name: string,
 
 // Icons
 export function StackLogos() {
+  const { isLg } = useWindowSize();
   return (
     <div>
       <motion.ul
@@ -130,11 +134,11 @@ export function StackLogos() {
           duration: 50, // Tiempo para completar una rotación
           ease: "linear",
         }}
-        className="flex justify-center items-center w-[475px] h-[475px]"
+        className="flex justify-center items-center w-[250px] h-[250px] lg:w-[475px] lg:h-[475px]"
       >
         {stackLogos.map((logo, index) => {
           const angle = (360 / stackLogos.length) * index; // Calcular el ángulo para cada elemento
-          const radius = 475 / 2; // Radio del círculo
+          const radius = isLg ? 250 : 140; // Radio del círculo
 
           return (
             <motion.li key={index}
