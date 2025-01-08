@@ -42,19 +42,28 @@ export default function RootLayout({
                   {children}
                 </main>
                 <footer className="flex items-center justify-center gap-5 p-4 bg-blue-200 dark:bg-slate-950">
-                  <Image
-                    src="/logos/github.svg"
-                    width={50}
-                    height={50}
-                    alt="Github Logo"
-                  />
-                  <span className="text-slate-800 dark:text-white">casajus.alfonso@gmail.com</span>
-                  <Image
+                  <a
+                    href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"
+                  >
+                    <Image
                       src="/logos/linkedin.svg"
                       width={50}
                       height={50}
                       alt="Linkedin Logo"
-                  />
+                    />
+                  </a>
+                  <span className="text-slate-800 dark:text-white">casajus.alfonso@gmail.com</span>
+                  <a
+                    href="https://github.com/AlfonsoCasajus" target="_blank" rel="noopener noreferrer"
+                    className="dark:bg-gray-200 rounded-full"
+                  >
+                    <Image
+                      src="/logos/github.svg"
+                      width={50}
+                      height={50}
+                      alt="Github Logo"
+                    />
+                  </a> 
                 </footer>
               </Providers>
           </body>
