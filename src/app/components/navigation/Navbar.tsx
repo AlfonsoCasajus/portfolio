@@ -39,7 +39,7 @@ export function NavBar() {
       <NavbarContent justify="start">
         <User
           avatarProps={{
-            src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+            src: "profileAvatar.png",
           }}
           description="Web developer"
           name="Alfonso Casajus"
