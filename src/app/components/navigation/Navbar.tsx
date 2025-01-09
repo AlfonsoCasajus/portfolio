@@ -36,51 +36,49 @@ export function NavBar() {
   if (!mounted) return;
     
   return (
-    <div>
-      <Navbar position="sticky" className="justify-around">
-        <NavbarContent justify="start">
-          <User
-            avatarProps={{
-              src: "profileAvatar.png",
-            }}
-            description="Web developer"
-            name="Alfonso Casajus"
-            className="dark:text-white"
-          />
-        </NavbarContent>
+    <Navbar position="sticky" className="justify-around">
+      <NavbarContent justify="start">
+        <User
+          avatarProps={{
+            src: "profileAvatar.png",
+          }}
+          description="Web developer"
+          name="Alfonso Casajus"
+          className="dark:text-white"
+        />
+      </NavbarContent>
 
-        <NavbarContent justify="end">
-          <NavbarItem>
-            <Switch
-              isSelected={ theme === 'light' }
-              color="warning"
-              endContent={<FaMoon  />}
-              size="lg"
-              startContent={<FiSun />}
-              onValueChange={(isSelected) => isSelected ? setTheme('light') : setTheme('dark')}
-            />
-          </NavbarItem>
-          {/* <NavbarItem>
-            <div className="w-48">
-              <Select
-                defaultSelectedKeys={["es"]}
-                disallowEmptySelection
-              >
-                {
-                  languages.map((language) => (
-                    <SelectItem
-                      key={language.key}
-                      startContent={<Avatar alt={`${language.label}`} className="w-6 h-6" src={`https://flagcdn.com/${language.flag}.svg`} />}
-                    >
-                      {language.label}
-                    </SelectItem>
-                  ))
-                }
-              </Select>
-            </div>
-          </NavbarItem> */}
-        </NavbarContent>
-      </Navbar>
-    </div>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Switch
+            isSelected={ theme === 'light' }
+            color="warning"
+            endContent={<FaMoon  />}
+            size="lg"
+            startContent={<FiSun />}
+            onValueChange={(isSelected) => isSelected ? setTheme('light') : setTheme('dark')}
+          />
+        </NavbarItem>
+        {/* <NavbarItem>
+          <div className="w-48">
+            <Select
+              defaultSelectedKeys={["es"]}
+              disallowEmptySelection
+            >
+              {
+                languages.map((language) => (
+                  <SelectItem
+                    key={language.key}
+                    startContent={<Avatar alt={`${language.label}`} className="w-6 h-6" src={`https://flagcdn.com/${language.flag}.svg`} />}
+                  >
+                    {language.label}
+                  </SelectItem>
+                ))
+              }
+            </Select>
+          </div>
+        </NavbarItem> */}
+      </NavbarContent>
+    </Navbar>
   );
 };
