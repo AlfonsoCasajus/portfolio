@@ -95,8 +95,8 @@ export function ProjectCard({
                         <Image
                           
                           src={`/logos/${integration}.svg`}
-                          width={30}
-                          height={20}
+                          width={40}
+                          height={40}
                           alt={`${integration} Logo`}
                         />
                       </Tooltip>

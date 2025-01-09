@@ -83,7 +83,7 @@ export function Projects() {
 				"
 				technologies={['vuejs', 'tailwind', 'vitejs']}
 				githubUrl=" https://github.com/AlfonsoCasajus/chat-interface"
-				liveUrl="https://chat-interface-beta.vercel.app/"
+				liveUrl="https://chat-interface-m9x88nkrq-alfonsos-projects-8df95a00.vercel.app/"
 			/>
 		</motion.span>
 		<motion.span
