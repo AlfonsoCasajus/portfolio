@@ -1,6 +1,5 @@
-// import { Github, Globe, Star } from 'lucide-react';
-import { CiGlobe } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { TbLivePhotoFilled } from "react-icons/tb";
 import Image from 'next/image';
 import { Tooltip, Card, CardBody, CardFooter, Button } from "@nextui-org/react";
 
@@ -121,8 +120,8 @@ export function ProjectCard({
       <CardFooter className="px-6 pb-6 pt-0 flex gap-2">
         {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="flat" color="primary">
-                  <CiGlobe className="mr-1 h-5 w-5" />
+              <Button variant="flat" color="success">
+                  <TbLivePhotoFilled className="mr-1 h-5 w-5" />
                   Live Demo
               </Button>
             </a>
