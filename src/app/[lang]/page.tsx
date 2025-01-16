@@ -8,6 +8,7 @@ export default async function Home() {
   return (
     <div className="transition-all font-[family-name:var(--font-geist-sans)]">
       <Hero />
+      {/* <Experience /> */}
       <Projects />
     </div>
   );
