@@ -4,10 +4,12 @@ import { StackLogos } from "../StackLogos";
 import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
+import { useTheme } from "next-themes";
 
 // Icons
 export function Hero() {
   const { isLg } = useWindowSize();
+  const { theme } = useTheme();
   return (
     <section className="relative p-5 lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-light dark:bg-slate-950 overflow-hidden">
       <span className="self-center justify-self-center">
@@ -81,10 +83,10 @@ export function Hero() {
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
               </defs>
               <g className="parallax">
-                <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(0, 44, 62, 0.7)" />
-                <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(0, 44, 62, 0.5)" />
-                <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(0, 44, 62, 0.3)" />
-                <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(0, 44, 62, 1)" />
+                <use xlinkHref="#gentle-wave" x="48" y="0" fill={theme === 'dark' ? 'rgba(0, 44, 62, 0.7)' : 'rgb(120, 187, 196, 0.7)'} />
+                <use xlinkHref="#gentle-wave" x="48" y="3" fill={theme === 'dark' ? 'rgba(0, 44, 62, 0.5)' : 'rgb(120, 187, 196, 0.5)'} />
+                <use xlinkHref="#gentle-wave" x="48" y="5" fill={theme === 'dark' ? 'rgba(0, 44, 62, 0.3)' : 'rgb(120, 187, 196, 0.3)'} />
+                <use xlinkHref="#gentle-wave" x="48" y="7" fill={theme === 'dark' ? 'rgba(0, 44, 62, 1)' : 'rgb(120, 187, 196, 1)'} />
               </g>
             </svg>
           </div>

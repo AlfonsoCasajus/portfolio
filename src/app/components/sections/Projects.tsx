@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export function Projects() {
   return (
     <section
-      className="grid grid-cols-1 grid-rows-1 gap-5 p-6 bg-blue-200 dark:bg-[#002C3E] overflow-hidden sm:grid-cols-2 xl:grid-cols-4"
+      className="grid grid-cols-1 grid-rows-1 gap-5 p-6 bg-[#78BBC4] dark:bg-[#002C3E] overflow-hidden sm:grid-cols-2 xl:grid-cols-4"
     >
 		<motion.span
 			className="col-span-1 row-span-2"

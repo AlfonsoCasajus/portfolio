@@ -41,7 +41,7 @@ export default function RootLayout({
                 <main>
                   {children}
                 </main>
-                <footer className="flex items-center justify-center gap-5 p-4 bg-blue-200 dark:bg-slate-950">
+                <footer className="flex items-center justify-center gap-5 p-4 bg-[#78BBC4] dark:bg-[#002C3E]">
                   <a
                     href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"
                   >
