@@ -8,7 +8,6 @@ export function Projects() {
       className="grid grid-cols-1 grid-rows-1 gap-5 p-6 bg-[#78BBC4] dark:bg-[#002C3E] overflow-hidden sm:grid-cols-2 xl:grid-cols-4"
     >
 		<motion.span
-			className="col-span-1 row-span-2"
 			animate={{
 				opacity: 1,
 				x: [-50, 0]
@@ -28,6 +27,7 @@ export function Projects() {
 				authentication={['google', 'discord']}
 				integrations={['riotGames']}
 				liveUrl="https://elunderesports.com/torneos"
+				bgUrl="elUnder.svg"
 			/>
 		</motion.span>
 		<motion.span
@@ -63,6 +63,7 @@ export function Projects() {
 				githubUrl="https://github.com/AlfonsoCasajus/global-pokedex"
 				liveUrl="https://pokedex-vert-zeta.vercel.app/"
 				integrations={['pokeapi']}
+				bgUrl="snorlax.png"
 			/>
 		</motion.span>
 		<motion.span
@@ -103,6 +104,7 @@ export function Projects() {
 				technologies={['html5', 'css', 'javascript']}
 				githubUrl="https://github.com/AlfonsoCasajus/sliding-puzzle"
 				liveUrl="https://alfonsocasajus.github.io/sliding-puzzle/"
+				bgUrl="monk.png"
 			/>
 		</motion.span>
 		<motion.span
