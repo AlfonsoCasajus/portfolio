@@ -27,7 +27,7 @@ export function Projects() {
 				authentication={['google', 'discord']}
 				integrations={['riotGames']}
 				liveUrl="https://elunderesports.com/torneos"
-				bgUrl="elUnder.svg"
+				bgUrl="elUnder.png"
 			/>
 		</motion.span>
 		<motion.span

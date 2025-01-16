@@ -40,7 +40,7 @@ export function Hero() {
             </Button>
           </a>
           <a
-            href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/alfonso-casajus-78b0a11b2/" target="_blank" rel="noopener noreferrer"
           >
              <Button size={isLg ? 'lg' : 'sm'} endContent={<FaLinkedin />} variant="flat" aria-label="Linkedin" color="primary">
               Linkedin
