@@ -36,7 +36,7 @@ export function NavBar() {
   if (!mounted) return;
     
   return (
-    <Navbar position="sticky" className="justify-around">
+    <Navbar position="sticky" className="dark:bg-slate-950">
       <NavbarContent justify="start">
         <User
           avatarProps={{
