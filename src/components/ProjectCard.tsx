@@ -31,7 +31,7 @@ export function ProjectCard({
       transition-all duration-300 hover:shadow-lg
       text-white dark:bg-slate-950"
     >
-      <CardBody className="p-6 overflow-hidden">
+      <CardBody className="p-6 overflow-hidden z-10">
         <h3 className="text-2xl font-bold tracking-tight mb-2 text-slate-800 dark:text-cyan-50">{title}</h3>
         <p className="text-muted-foreground mb-4 text-slate-800 dark:text-cyan-50">{description}</p>
         <div className="flex flex-wrap gap-2">
@@ -107,7 +107,7 @@ export function ProjectCard({
           )
         }
       </CardBody>
-      <CardFooter className="px-6 pb-6 pt-0 flex gap-2">
+      <CardFooter className="px-6 pb-6 pt-0 flex gap-2 z-10">
         {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="flat" color="success">
@@ -127,15 +127,13 @@ export function ProjectCard({
       </CardFooter>
       {
           bgUrl && (
-            <div className="absolute right-[-120px] bottom-[-80px] opacity-30">
-              <Image
-                alt="Card background"
-                className="object-cover rounded-xl"
-                src={`/projects/${bgUrl}`}
-                width={400}
-                height='100'
-              />
-            </div>
+            <Image
+              alt="Card background"
+              className="object-cover rounded-xl absolute right-[-120px] bottom-[-80px] opacity-30"
+              src={`/projects/${bgUrl}`}
+              width={400}
+              height='100'
+            />
           )
         }
     </Card>
