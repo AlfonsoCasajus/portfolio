@@ -11,7 +11,7 @@ export function Hero() {
   const { isLg } = useWindowSize();
   const { theme } = useTheme();
   return (
-    <section className="relative p-5 lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-light dark:bg-slate-950 overflow-hidden">
+    <section className="relative p-5 min-h-[75vh] lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-light dark:bg-slate-950 overflow-hidden">
       <span className="self-center justify-self-center">
         <motion.h1
           initial={{ y: "-100vh", opacity: 0 }}
@@ -69,7 +69,7 @@ export function Hero() {
         )
       }
       {
-        isLg && (
+        theme && (
           <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
             <svg
               className="waves"
