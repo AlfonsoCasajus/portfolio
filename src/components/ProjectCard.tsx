@@ -7,8 +7,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  authentication?: string[];
-  integrations?: string[];
   githubUrl?: string;
   liveUrl?: string;
   bgUrl?: string;
@@ -18,8 +16,6 @@ export function ProjectCard({
   title,
   description,
   technologies,
-  authentication,
-  integrations,
   githubUrl,
   liveUrl,
   bgUrl
@@ -52,59 +48,6 @@ export function ProjectCard({
               </Tooltip>
           ))}
         </div>
-        {
-          authentication && (
-            <div className="mt-2 text-slate-800 dark:text-white">
-              <label className="text-xl">Autenticacion</label>
-              <div className="flex flex-wrap gap-3 mt-3">
-                {authentication.map((method,index) => (
-                  <Tooltip
-                    key={index}
-                    content={
-                    <p className="text-slate-950 dark:text-slate-200">
-                      {method}
-                    </p>
-                    }>
-                      <Image
-                        
-                        src={`/logos/${method}.svg`}
-                        width={30}
-                        height={20}
-                        alt={`${method} Logo`}
-                      />
-                    </Tooltip>
-                ))}
-              </div>
-            </div>
-          )
-        }
-        {
-          integrations && (
-            <div className="mt-2 text-slate-800 dark:text-white">
-              <label className="text-xl">Integraciones</label>
-              <div className="flex flex-wrap gap-2 mt-3">
-                { integrations.map((integration,index) => (
-                  <div key={index}>
-                    <Tooltip
-                      content={
-                      <p className="text-slate-950 dark:text-slate-200">
-                        {integration}
-                      </p>
-                      }>
-                        <Image
-                          
-                          src={`/logos/${integration}.svg`}
-                          width={40}
-                          height={40}
-                          alt={`${integration} Logo`}
-                        />
-                      </Tooltip>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )
-        }
       </CardBody>
       <CardFooter className="px-6 pb-6 pt-0 flex gap-2 z-10">
         {liveUrl && (

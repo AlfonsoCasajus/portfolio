@@ -23,9 +23,7 @@ export function Projects() {
 					ver resultados de sus partidas jugadas y encontrar
 					otros equipos con quienes competir
 				"
-				technologies={['vuejs', 'sass', 'nestjs', 'typescript', 'postgresql']}
-				authentication={['google', 'discord']}
-				integrations={['riotGames']}
+				technologies={['vuejs', 'sass', 'nestjs', 'typescript', 'postgresql', 'riotGames', 'google', 'discord']}
 				liveUrl="https://elunderesports.com/torneos"
 				bgUrl="elUnder.png"
 			/>
@@ -59,10 +57,9 @@ export function Projects() {
 					App para ver todos los diferentes pokemones que existen junto a su informacion.
 					Cuenta con filtrado y la posibilidad de marcar los pokemones favoritos
 				"
-				technologies={['vuejs', 'typescript', 'vitejs']}
+				technologies={['vuejs', 'typescript', 'vitejs', 'pokeapi']}
 				githubUrl="https://github.com/AlfonsoCasajus/global-pokedex"
 				liveUrl="https://pokedex-vert-zeta.vercel.app/"
-				integrations={['pokeapi']}
 				bgUrl="snorlax.png"
 			/>
 		</motion.span>

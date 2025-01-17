@@ -1,6 +1,6 @@
 'use client'
 import { Button } from "@nextui-org/button";
-import { StackLogos } from "../StackLogos";
+import { StackLogos } from "../utils/StackLogos";
 import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
