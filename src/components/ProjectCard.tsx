@@ -76,7 +76,7 @@ export function ProjectCard({
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="bordered" className="dark:text-white">
                   <FaGithub className="mr-1 h-5 w-5" />
-                  Code
+                  Codigo
               </Button>
             </a>
         )}
