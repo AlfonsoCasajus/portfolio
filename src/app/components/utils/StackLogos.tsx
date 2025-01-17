@@ -43,7 +43,9 @@ export function StackLogos() {
         className="flex justify-center items-center w-[250px] h-[250px] lg:w-[475px] lg:h-[475px]"
       >
         {logos.map((logo, index) => {
-          const angle = (360 / logos.length) * index; // Calcular el ángulo para cada elemento
+          const amount = 17;
+          if (index > amount) return;
+          const angle = (360 / amount) * index; // Calcular el ángulo para cada elemento
           const radius = isLg ? 250 : 140; // Radio del círculo
 
           return (

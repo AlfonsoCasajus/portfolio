@@ -40,7 +40,7 @@ export const logos = [
 	  name: 'TypeScript',
 	},
 	{
-	  color: '#2b2b2b', // Gris muy oscuro
+	  color: '#353535', // Gris muy oscuro
 	  key: 'nextjs',
 	  name: 'Next.js',
 	},
@@ -88,5 +88,25 @@ export const logos = [
 	  color: '#972d1d', // Naranja oscuro
 	  key: 'git',
 	  name: 'Git',
+	},
+	{
+	  color: '#897225', // Amarillo oscuro
+	  key: 'pokeapi',
+	  name: 'PokeAPI',
+	},
+	{
+	  color: '#441210', // Rojo oscuro
+	  key: 'riotGames',
+	  name: 'Riot API',
+	},
+	{
+	  color: '#425a5e', // Gris Oscuro
+	  key: 'google',
+	  name: 'Google OAuth',
+	},
+	{
+	  color: '#29306d', // Violeta oscuro
+	  key: 'discord',
+	  name: 'Discord OAuth',
 	},
   ];

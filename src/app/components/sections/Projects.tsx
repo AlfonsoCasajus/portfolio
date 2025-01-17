@@ -57,7 +57,7 @@ export function Projects() {
 					App para ver todos los diferentes pokemones que existen junto a su informacion.
 					Cuenta con filtrado y la posibilidad de marcar los pokemones favoritos
 				"
-				technologies={['vuejs', 'typescript', 'vitejs', 'pokeapi']}
+				technologies={['vuejs', 'css', 'typescript', 'vitejs', 'pokeapi']}
 				githubUrl="https://github.com/AlfonsoCasajus/global-pokedex"
 				liveUrl="https://pokedex-vert-zeta.vercel.app/"
 				bgUrl="snorlax.png"
