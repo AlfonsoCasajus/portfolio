@@ -46,7 +46,7 @@ export function ProjectCard({
                 }>
   
                   <motion.div
-                    className='flex justify-center items-center backdrop-blur-sm rounded-xl lg:w-12 lg:h-12'
+                    className='flex justify-center items-center backdrop-blur-sm rounded-xl w-10 h-10 lg:w-12 lg:h-12'
                     whileHover={{ scale: 1.1, y: -10 }}
                     style={{backgroundColor: stack.color}}
 
