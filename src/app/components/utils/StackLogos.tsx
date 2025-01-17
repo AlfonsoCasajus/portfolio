@@ -2,100 +2,7 @@ import Image from 'next/image'
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion"
 import useWindowSize from '@/hooks/useWindowSize';
-
-
-const stackLogos = [
-  {
-    color: '#1E3A8A', // Azul oscuro
-    image: 'css',
-    name: 'CSS',
-  },
-  {
-    color: '#B7411C', // Rojo oscuro
-    image: 'html5',
-    name: 'HTML5',
-  },
-  {
-    color: '#C2A500', // Amarillo oscuro
-    image: 'javascript',
-    name: 'JavaScript',
-  },
-  {
-    color: '#2C6E9E', // Azul más oscuro
-    image: 'react',
-    name: 'React',
-  },
-  {
-    color: '#2C8280', // Verde azulado oscuro
-    image: 'tailwind',
-    name: 'Tailwind CSS',
-  },
-  {
-    color: '#2e664d', // Azul más oscuro
-    image: 'vuejs',
-    name: 'Vue Js',
-  },
-  {
-    color: '#6b2b3a', // Azul más oscuro
-    image: 'nestjs',
-    name: 'Nest Js',
-  },
-  {
-    color: '#22577E', // Azul oscuro
-    image: 'typescript',
-    name: 'TypeScript',
-  },
-  {
-    color: '#2b2b2b', // Gris muy oscuro
-    image: 'nextjs',
-    name: 'Next.js',
-  },
-  {
-    color: '#267326', // Verde oscuro
-    image: 'nodejs',
-    name: 'Node.js',
-  },
-  {
-    color: '#4B7945', // Verde más oscuro
-    image: 'expressjs',
-    name: 'Express.js',
-  },
-  {
-    color: '#9B267D', // Rosado oscuro
-    image: 'graphql',
-    name: 'GraphQL',
-  },
-  {
-    color: '#264c6b', // Rosado oscuro
-    image: 'postgresql',
-    name: 'PostgreSQL',
-  },
-  {
-    color: '#7a46c9', // Rosado oscuro
-    image: 'vitejs',
-    name: 'Vite',
-  },
-  {
-    color: '#142c26', // Rosado oscuro
-    image: 'nuxt',
-    name: 'Nuxt Js',
-  },
-  {
-    color: '#63314a', // Rosado oscuro
-    image: 'sass',
-    name: 'Sass',
-  },
-  {
-    color: '#005A8E', // Azul más oscuro
-    image: 'vscode',
-    name: 'Visual Studio Code',
-  },
-  {
-    color: '#972d1d', // Naranja oscuro
-    image: 'git',
-    name: 'Git',
-  },
-];
+import { logos } from "@/app/utils/logos";
 
 const StackLogo = ({ image, name, color, style }: { image: string, name: string, color: string, style: object }) => {
   const { isLg } = useWindowSize();
@@ -120,7 +27,6 @@ const StackLogo = ({ image, name, color, style }: { image: string, name: string,
   )
 }
 
-// Icons
 export function StackLogos() {
   const { isLg } = useWindowSize();
   return (
@@ -136,8 +42,8 @@ export function StackLogos() {
         }}
         className="flex justify-center items-center w-[250px] h-[250px] lg:w-[475px] lg:h-[475px]"
       >
-        {stackLogos.map((logo, index) => {
-          const angle = (360 / stackLogos.length) * index; // Calcular el ángulo para cada elemento
+        {logos.map((logo, index) => {
+          const angle = (360 / logos.length) * index; // Calcular el ángulo para cada elemento
           const radius = isLg ? 250 : 140; // Radio del círculo
 
           return (
@@ -145,7 +51,7 @@ export function StackLogos() {
               whileHover={{ scale: 1.1 }}
               className='absolute left-1/2 top-1/2'
             >
-              <StackLogo name={logo.name} image={logo.image} color={logo.color}
+              <StackLogo name={logo.name} image={logo.key} color={logo.color}
                 style={{
                   transform: `translate(-50%, -50%) rotate(${angle}deg) translate(${radius}px)`,
                 }}
