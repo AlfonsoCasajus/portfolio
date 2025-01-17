@@ -2,7 +2,6 @@ import { FaGithub } from "react-icons/fa";
 import { TbLivePhotoFilled } from "react-icons/tb";
 import Image from 'next/image';
 import { Tooltip, Card, CardBody, CardFooter, Button } from "@nextui-org/react";
-import { div } from "framer-motion/client";
 
 interface ProjectCardProps {
   title: string;
