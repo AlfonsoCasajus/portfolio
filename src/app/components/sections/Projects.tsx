@@ -76,12 +76,11 @@ export function Projects() {
 		{ projects.map((project, index) => (
 			<motion.span
 				key={`project-${index}`}
-				animate={{
-					opacity: 1,
-					x: [-50, 0]
-				}}
+				initial={{ opacity: 0, scale: 0.8 }}
+				animate={{ opacity: 1, scale: 1 }}
 				transition={{
-					delay: index * 0.2,
+					delay: index * 0.3,
+					duration: 0.5
 				}}
 			>
 				<ProjectCard
