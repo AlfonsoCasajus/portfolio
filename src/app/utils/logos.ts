@@ -101,7 +101,7 @@ export const logos = [
 	},
 	{
 	  color: '#425a5e', // Gris Oscuro
-	  key: 'google',
+	  key: 'chrome',
 	  name: 'Google OAuth',
 	},
 	{
