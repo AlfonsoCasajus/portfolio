@@ -8,7 +8,7 @@ export function Projects() {
 	const projects = [
 		{
 			name: 'Plataforma de Torneos',
-			desc: `Permite a organizadores administrar sus torneos y a jugadores inscribirse en ellos, 
+			desc: `Permite a organizadores administrar sus torneos y a jugadores inscribirse en ellos,
 					ver resultados de sus partidas jugadas y encontrar
 					otros equipos con quienes competir`,
 			tech: [
@@ -63,7 +63,7 @@ export function Projects() {
 		},
 		{
 			name: 'Video Club',
-			desc: `Juego rompecabezas donde las piezas comienzan desordenadas y se debe mover de a una a la vez para 
+			desc: `Juego rompecabezas donde las piezas comienzan desordenadas y se debe mover de a una a la vez para
 			armar la imagen`,
 			tech: ['vuejs', 'nuxt', 'sass'],
 			liveUrl: 'https://verifarma-videoclub.vercel.app/login',
@@ -118,7 +118,7 @@ export function Projects() {
 				size="lg"
 				color="secondary"
 				radius="full"
-				selectedKey={tab}
+				selectedKey={tab as string}
 				defaultSelectedKey="all"
 				onSelectionChange={setTab}
 			>
