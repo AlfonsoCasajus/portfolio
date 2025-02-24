@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { TbLivePhotoFilled } from "react-icons/tb";
 import Image from 'next/image';
-import { Tooltip, Card, CardBody, CardFooter, Button } from "@nextui-org/react";
+import { Tooltip, Card, CardBody, CardFooter, Button, Divider } from "@heroui/react";
 import { logos } from "@/app/utils/logos";
 import { motion } from "framer-motion"
 
@@ -63,7 +63,8 @@ export function ProjectCard({
           })}
         </div>
       </CardBody>
-      <CardFooter className="px-6 pb-6 pt-0 flex gap-2 z-10">
+      <Divider />
+      <CardFooter className="p-3 flex items-center gap-2 z-10">
         {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="flat" color="success">

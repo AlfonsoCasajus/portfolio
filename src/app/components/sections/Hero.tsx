@@ -1,5 +1,5 @@
 'use client'
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { StackLogos } from "../utils/StackLogos";
 import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";

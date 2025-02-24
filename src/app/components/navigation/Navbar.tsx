@@ -1,65 +1,65 @@
 'use client'
 
 // Components
-import { Navbar, NavbarContent, NavbarItem, Switch, User } from "@nextui-org/react";
-// import { Select, SelectItem, Avatar } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, Switch, User } from '@heroui/react'
 
 // Icons
-import { FiSun } from "react-icons/fi";
-import { FaMoon } from "react-icons/fa";
+import { FiSun } from 'react-icons/fi'
+import { FaMoon } from 'react-icons/fa'
 
 // Hooks
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 export function NavBar() {
+	const [mounted, setMounted] = useState(false)
 
-  const [mounted, setMounted] = useState(false)
-  
-  const { theme, setTheme } = useTheme();
-  
-  // const languages = [
-  //   { key: "es", label: "Castellano", flag: 'ar' },
-  //   { key: "brt", label: "Ingles", flag: 'gb' }
-  // ]
-  
-  useEffect(() => setMounted(true), [])
-  
-  // Handle visibility
-  // const [showNavbar, setShowNavbar] = useState(false)
-  // const handleScroll = () => {
-  //   if (window.scrollY > 20) setShowNavbar(true)
-  //   else setShowNavbar(false)
-  // }
-  // useEffect(() => window.addEventListener('scroll', handleScroll), [])
+	const { theme, setTheme } = useTheme()
 
-  if (!mounted) return;
-    
-  return (
-    <Navbar position="sticky" className="dark:bg-slate-950">
-      <NavbarContent justify="start">
-        <User
-          avatarProps={{
-            src: "profileAvatar.png",
-          }}
-          description="Web developer"
-          name="Alfonso Casajus"
-          className="dark:text-white"
-        />
-      </NavbarContent>
+	// const languages = [
+	//   { key: "es", label: "Castellano", flag: 'ar' },
+	//   { key: "brt", label: "Ingles", flag: 'gb' }
+	// ]
 
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Switch
-            isSelected={ theme === 'light' }
-            color="warning"
-            endContent={<FaMoon  />}
-            size="lg"
-            startContent={<FiSun />}
-            onValueChange={(isSelected) => isSelected ? setTheme('light') : setTheme('dark')}
-          />
-        </NavbarItem>
-        {/* <NavbarItem>
+	useEffect(() => setMounted(true), [])
+
+	// Handle visibility
+	// const [showNavbar, setShowNavbar] = useState(false)
+	// const handleScroll = () => {
+	//   if (window.scrollY > 20) setShowNavbar(true)
+	//   else setShowNavbar(false)
+	// }
+	// useEffect(() => window.addEventListener('scroll', handleScroll), [])
+
+	if (!mounted) return
+
+	return (
+		<Navbar position="sticky" className="dark:bg-slate-950">
+			<NavbarContent justify="start">
+				<User
+					avatarProps={{
+						src: 'profileAvatar.png',
+					}}
+					description="Web developer"
+					name="Alfonso Casajus"
+					className="dark:text-white"
+				/>
+			</NavbarContent>
+
+			<NavbarContent justify="end">
+				<NavbarItem>
+					<Switch
+						isSelected={theme === 'light'}
+						color="warning"
+						endContent={<FaMoon />}
+						size="lg"
+						startContent={<FiSun />}
+						onValueChange={(isSelected) =>
+							isSelected ? setTheme('light') : setTheme('dark')
+						}
+					/>
+				</NavbarItem>
+				{/* <NavbarItem>
           <div className="w-48">
             <Select
               defaultSelectedKeys={["es"]}
@@ -78,7 +78,7 @@ export function NavBar() {
             </Select>
           </div>
         </NavbarItem> */}
-      </NavbarContent>
-    </Navbar>
-  );
-};
+			</NavbarContent>
+		</Navbar>
+	)
+}

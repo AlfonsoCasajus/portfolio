@@ -109,4 +109,14 @@ export const logos = [
 	  key: 'discord',
 	  name: 'Discord OAuth',
 	},
+	{
+	  color: '#0F1110',
+	  key: 'gsap',
+	  name: 'GSAP',
+	},
+	{
+	  color: '#001D2A',
+	  key: 'mongodb',
+	  name: 'MongoDB',
+	},
   ];
